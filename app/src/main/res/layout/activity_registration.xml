@@ -97,4 +97,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/selectDeptTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDept"
+        app:layout_constraintEnd_toStartOf="@+id/regSelectButton"
+        app:layout_constraintStart_toStartOf="@+id/editTextId" />
 </androidx.constraintlayout.widget.ConstraintLayout>

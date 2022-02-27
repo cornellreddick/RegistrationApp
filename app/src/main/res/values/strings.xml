@@ -17,4 +17,14 @@
     <string name="bio">Bio Informatics</string>
     <string name="data">Data Science</string>
 
+    <string name="profileNameLabel">Name:</string>
+    <string name="profileEmailLabel">Email:</string>
+    <string name="profileIdLabel">ID:</string>
+    <string name="profileDeptLabel">Dept:</string>
+
+    <string name="profileNameResults"></string>
+    <string name="profileEmailResults"></string>
+    <string name="profileIdResults"></string>
+    <string name="profileDeptResults"></string>
+
 </resources>

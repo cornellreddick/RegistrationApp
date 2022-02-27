@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/profileTextViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profileNameLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profileTextViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/profileEmailLabel"
+        app:layout_constraintStart_toStartOf="@+id/profileTextViewName"
+        app:layout_constraintTop_toBottomOf="@+id/profileTextViewName" />
+
+    <TextView
+        android:id="@+id/profileTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/profileIdLabel"
+        app:layout_constraintStart_toStartOf="@+id/profileTextViewEmail"
+        app:layout_constraintTop_toBottomOf="@+id/profileTextViewEmail" />
+
+    <TextView
+        android:id="@+id/profileTextViewDept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/profileDeptLabel"
+        app:layout_constraintStart_toStartOf="@+id/profileTextViewId"
+        app:layout_constraintTop_toBottomOf="@+id/profileTextViewId" />
+
+    <TextView
+        android:id="@+id/profileTextViewNameResults"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/profileNameResults"
+        app:layout_constraintBottom_toBottomOf="@+id/profileTextViewName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profileTextViewName" />
+
+    <TextView
+        android:id="@+id/profileTextViewEmailResults"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/profileEmailResults"
+        app:layout_constraintBottom_toBottomOf="@+id/profileTextViewEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/profileTextViewNameResults" />
+
+    <TextView
+        android:id="@+id/profileTextViewIdResults"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/profileIdResults"
+        app:layout_constraintBottom_toBottomOf="@+id/profileTextViewId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/profileTextViewEmailResults" />
+
+    <TextView
+        android:id="@+id/profileTextViewDeptResults"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/profileDeptResults"
+        app:layout_constraintBottom_toBottomOf="@+id/profileTextViewDept"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/profileTextViewIdResults" />
+</androidx.constraintlayout.widget.ConstraintLayout>

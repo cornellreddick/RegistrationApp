@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RegistrationApp">
         <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".DepartmentActivity"
             android:exported="false" />
         <activity
