@@ -14,10 +14,10 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         setTitle("Profile");
 
-        profileName = findViewById(R.id.profileTextViewName);
-        profileEmail = findViewById(R.id.profileTextViewEmail);
-        profileId = findViewById(R.id.profileTextViewId);
-        profileDept = findViewById(R.id.profileTextViewDept);
+        profileName = findViewById(R.id.profileTextViewNameResults);
+        profileEmail = findViewById(R.id.profileTextViewEmailResults);
+        profileId = findViewById(R.id.profileTextViewIdResults);
+        profileDept = findViewById(R.id.profileTextViewDeptResults);
 
         if (getIntent() !=null && getIntent().getExtras() !=null && getIntent().hasExtra(RegistrationActivity.PROFILE)){
             Profile profile = (Profile) getIntent().getSerializableExtra(RegistrationActivity.PROFILE);
