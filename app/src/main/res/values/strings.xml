@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">RegistrationApp</string>
+    <string name="welcomeLabel">Welcome !!</string>
+    <string name="regBtnLabel">Register</string>
+    <string name="nameLabel">Name:</string>
+    <string name="emailLabel">Email:</string>
+    <string name="idLabel">ID:</string>
+    <string name="deptLabel">Dept:</string>
+    <string name="nameInput">Enter Name</string>
+    <string name="emailInput">Enter Email</string>
+    <string name="idInput">Enter ID</string>
+    <string name="selectBtnLabel">Select</string>
+    <string name="submit">Submit</string>
+    <string name="Cancel">Cancel</string>
+    <string name="compScienLabel">Computer Science</string>
+    <string name="softLabel">Software Info. Systems</string>
+    <string name="bio">Bio Informatics</string>
+    <string name="data">Data Science</string>
+
+</resources>
