@@ -11,11 +11,17 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class RegistrationActivity extends AppCompatActivity {
-    Button selectBtn;
+    Button selectBtn, submitBtn;
     TextView selectDept;
+    EditText nameInput, emailInput, IdInput;
+    Profile profile;
+    final static public String PROFILE = "USER";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +32,11 @@ public class RegistrationActivity extends AppCompatActivity {
 
 
         selectBtn = findViewById(R.id.regSelectButton);
+        submitBtn = findViewById(R.id.regSubmitButton);
         selectDept = findViewById(R.id.selectDeptTextView);
+        nameInput = findViewById(R.id.editTextName);
+        emailInput = findViewById(R.id.editTextEmail);
+        IdInput = findViewById(R.id.editTextId);
 
         selectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +46,30 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
+        submitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (nameInput.getText().toString().equals("")){
+                    Toast.makeText(getApplicationContext(), "Please enter name!!", Toast.LENGTH_SHORT).show();
+                }else if (emailInput.getText().toString().equals("")){
+                    Toast.makeText(getApplicationContext(), "Please enter email!!", Toast.LENGTH_SHORT).show();
+                }else if (IdInput.getText().toString().equals("")){
+                    Toast.makeText(getApplicationContext(), "Please enter Id!!", Toast.LENGTH_SHORT).show();
+                }else if(selectDept.getText().toString().equals("")){
+                    Toast.makeText(getApplicationContext(), "Please click the Select Button,  and choose a department!!", Toast.LENGTH_SHORT).show();
+                }else{
+                    Intent intent = new Intent(RegistrationActivity.this, ProfileActivity.class);
+                   intent.putExtra(PROFILE, new Profile(nameInput.getText().toString(), emailInput.getText().toString(), IdInput.getText().toString(), selectDept.getText().toString()));
+                   startActivity(intent);
+
+                }
+            }
+        });
+
     }
+
+
+
 
     ActivityResultLauncher<Intent> startForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
         @Override

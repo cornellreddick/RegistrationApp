@@ -1,9 +1,11 @@
 package com.example.registrationapp;
 
-public class Profile {
+import java.io.Serializable;
+
+public class Profile implements Serializable {
     String name;
     String email;
-    int id;
+    String id;
     String dept;
 
     public String getName() {
@@ -29,15 +31,15 @@ public class Profile {
         this.email = email;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public Profile(String name, String email, int id, String dept) {
+    public Profile(String name, String email, String id, String dept) {
         this.name = name;
         this.email = email;
         this.id = id;
